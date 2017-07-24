@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="latest"
+ majorVersion="0"
+ minorVersion="0"
+ modelPersistenceProviderPackage="NeoPersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1010">
+    <Things>
+        <Thing
+         description=""
+         documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#xA;"
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2017-07-24T10:23:00.087-05:00"
+         name="AndroidDeviceCreator"
+         projectName=""
+         published="false"
+         tags="Applications:AndroidApp"
+         thingTemplate="AndroidDeviceTemplate"
+         valueStream="">
+            <Owner
+             name="Administrator"
+             type="User"></Owner>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read>
+                    <Principal
+                     isPermitted="true"
+                     name="Developers"
+                     type="Group"></Principal>
+                </Read>
+                <Update>
+                    <Principal
+                     isPermitted="true"
+                     name="Developers"
+                     type="Group"></Principal>
+                </Update>
+                <Delete>
+                    <Principal
+                     isPermitted="true"
+                     name="Developers"
+                     type="Group"></Principal>
+                </Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Developers"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="Developers"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Developers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Developers"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="Developers"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateDeviceFatima">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="imei"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateDevice">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var androidDeviceName="AndroidDevice_"+imei;
+                                        
+                                        var params = {
+                                        	principal: "Developers" /* STRING */,
+                                        	allow: true /* BOOLEAN */,
+                                        	principalType: "Group" /* STRING */,
+                                        	resource: "*" /* STRING */,
+                                        	type: "ServiceInvoke" /* STRING */
+                                        };
+                                        
+                                        // no return
+                                        Resources["EntityServices"].AddRunTimePermission(params);
+                                        var params = {
+                                        	tags: me.tags /* TAGS */,
+                                        	thingTemplateName: "AndroidDeviceTemplate" /* THINGTEMPLATENAME */,
+                                        	description: undefined /* STRING */,
+                                        	name: androidDeviceName/* STRING */
+                                            
+                                        };
+                                        
+                                        // no return
+                                        
+                                        Resources["EntityServices"].CreateThing(params);
+                                        
+                                        
+                                        Things[params.name].EnableThing();
+                                           
+                                        Things[params.name].RestartThing();
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <totalRams>
+                    <Value></Value>
+                    <Timestamp>2017-07-24T10:23:00.150-05:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </totalRams>
+                <location>
+                    <Value></Value>
+                    <Timestamp>2017-07-24T10:23:00.150-05:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </location>
+                <gpsLocation>
+                    <Value>0.0,0.0,0.0</Value>
+                    <Timestamp>2017-07-24T10:23:00.150-05:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </gpsLocation>
+                <device>
+                    <Value></Value>
+                    <Timestamp>2017-07-24T10:23:00.150-05:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </device>
+                <cpuUsage>
+                    <Value></Value>
+                    <Timestamp>2017-07-24T10:23:00.150-05:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </cpuUsage>
+                <phoneImei>
+                    <Value></Value>
+                    <Timestamp>2017-07-24T10:23:00.150-05:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </phoneImei>
+                <availRams>
+                    <Value></Value>
+                    <Timestamp>2017-07-24T10:23:00.150-05:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </availRams>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange
+                 changeAction="CREATE"
+                 changeReason=""
+                 timestamp="2017-07-24T10:23:00.087-05:00"
+                 user="Administrator"></ConfigurationChange>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
