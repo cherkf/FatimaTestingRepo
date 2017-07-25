@@ -8,16 +8,13 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2017-07-24T10:46:19.128-05:00"
+         lastModifiedDate="2017-07-25T15:20:08.706-05:00"
          name="NewFatimaThing"
          projectName=""
          published="false"
          tags=""
          thingTemplate="GenericThing"
          valueStream="">
-            <Owner
-             name="Administrator"
-             type="User"></Owner>
             <avatar></avatar>
             <DesignTimePermissions>
                 <Create></Create>
@@ -77,7 +74,7 @@
                                     <Row>
                                         <code>
                                         <![CDATA[
-                                        me = "fatima";
+                                        me = "fatima1233";
                                         ]]>
                                         </code>
                                     </Row>
@@ -95,23 +92,6 @@
             <AlertConfigurations></AlertConfigurations>
             <ImplementedShapes></ImplementedShapes>
             <ThingProperties></ThingProperties>
-            <ConfigurationChanges>
-                <ConfigurationChange
-                 changeAction="CREATE"
-                 changeReason="header : name : updated, thingTemplate : updated&#xA;"
-                 timestamp="2017-07-24T10:44:10.828-05:00"
-                 user="Administrator"></ConfigurationChange>
-                <ConfigurationChange
-                 changeAction="MODIFY"
-                 changeReason="services : TestFatimaService : Service Added&#xA;"
-                 timestamp="2017-07-24T10:44:23.828-05:00"
-                 user="Administrator"></ConfigurationChange>
-                <ConfigurationChange
-                 changeAction="MODIFY"
-                 changeReason="services : TestFatimaService : Code Updated&#xA;"
-                 timestamp="2017-07-24T10:46:19.128-05:00"
-                 user="Administrator"></ConfigurationChange>
-            </ConfigurationChanges>
         </Thing>
     </Things>
 </Entities>
