@@ -3,15 +3,15 @@
     <ApplicationKeys>
         <ApplicationKey
          clientName=""
-         description=""
+         description="test"
          documentationContent=""
          expirationDate="2117-07-01T14:50:06.688-05:00"
          homeMashup=""
          ipWhitelist=""
          keyId="702fa820-093d-4a56-a46e-5b848b4cdab2"
-         lastModifiedDate="2017-07-25T15:20:08.681-05:00"
+         lastModifiedDate="2017-07-26T13:33:47.217-05:00"
          name="AndroidKey"
-         projectName=""
+         projectName="ProjectFatimaRepo"
          tags="Applications:AndroidApp;Applications:enhancedAndroidApp"
          userNameReference="Administrator">
             <avatar></avatar>

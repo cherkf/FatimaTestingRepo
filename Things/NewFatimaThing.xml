@@ -8,7 +8,7 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2017-07-25T15:20:08.706-05:00"
+         lastModifiedDate="2017-07-26T13:52:12.043-05:00"
          name="NewFatimaThing"
          projectName=""
          published="false"
@@ -39,6 +39,22 @@
                      isLocalOnly="false"
                      isOpen="false"
                      isPrivate="false"
+                     name="newService">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
                      name="TestFatimaService">
                         <ResultType
                          baseType="NOTHING"
@@ -51,6 +67,33 @@
                 <EventDefinitions></EventDefinitions>
                 <ServiceMappings></ServiceMappings>
                 <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="newService">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
                     <ServiceImplementation
                      description=""
                      handlerName="Script"
@@ -74,7 +117,7 @@
                                     <Row>
                                         <code>
                                         <![CDATA[
-                                        me = "fatima123345";
+                                        me = "fatima1233";
                                         ]]>
                                         </code>
                                     </Row>
