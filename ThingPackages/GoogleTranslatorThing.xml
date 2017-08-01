@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities>
+    <ThingPackages>
+        <ThingPackage
+         aspect.isCreatable="true"
+         aspect.isExtension="true"
+         className="com.thingworx.things.translate.GoogleTranslatorThing"
+         description="Google Translator Thing"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2017-07-31T11:30:31.288-05:00"
+         name="GoogleTranslatorThing"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTables></ConfigurationTables>
+            <HandlerDefinitions>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.ExtensionServiceHandler"
+                 description="Extension handler"
+                 isUserDefinable="false"
+                 name="Extension"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.ReflectionServiceHandler"
+                 description="Reflection handler"
+                 isUserDefinable="false"
+                 name="Reflection"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.dsl.DSLServiceHandler"
+                 description="Script handler"
+                 isUserDefinable="true"
+                 name="Script"></HandlerDefinition>
+            </HandlerDefinitions>
+            <ImplementedShapes></ImplementedShapes>
+        </ThingPackage>
+    </ThingPackages>
+</Entities>

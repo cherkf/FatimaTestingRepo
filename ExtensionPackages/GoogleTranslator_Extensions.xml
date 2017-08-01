@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities>
+    <ExtensionPackages>
+        <ExtensionPackage
+         buildNumber=""
+         dependsOn=""
+         description="Google Translator Extensions"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2017-07-31T11:30:31.515-05:00"
+         migratorClass=""
+         minimumThingWorxVersion="6.6.0"
+         name="GoogleTranslator_Extensions"
+         packageVersion="4.0.0"
+         projectName=""
+         tags=""
+         vendor="ThingWorx Labs">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTables></ConfigurationTables>
+        </ExtensionPackage>
+    </ExtensionPackages>
+</Entities>
